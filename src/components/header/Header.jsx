@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box, IconButton, Button, Badge } from '@mu
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link, useLocation } from 'react-router';
 
-const Header = ({ cartCount = 0 }) => {
+const Header = () => {
   const location = useLocation();
   const userId = localStorage.getItem('user-id');
 
@@ -53,9 +53,6 @@ const Header = ({ cartCount = 0 }) => {
           color="inherit"
           sx={{ color: 'white' }}
         >
-          <Badge badgeContent={cartCount} color="error">
-            <ShoppingCartIcon />
-          </Badge>
         </IconButton>
       </Toolbar>
     </AppBar>

@@ -11,10 +11,7 @@ const Header = lazy(() => import('../components/header/Header'));
 export const AppRoutes = () => {
     return (
         <Router>
-            {/* Header should be full-width */}
-            <Header cartCount={2} />
-
-            {/* Page content should be centered with margin */}
+            <Header />
             <Box sx={{ mt: 4 }}>
                 <Container maxWidth="lg">
                     <Suspense fallback={<div>Loading...</div>}>
