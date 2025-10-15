@@ -37,7 +37,7 @@ const Cart = () => {
     try {
       const item = cart.find((i) => i.product._id === productId);
       const newQty = item.quantity + 1;
-      await axios.put(`${API_URL}/update/${productId}`, { qty: newQty, userId:1 });
+      await axios.put(`${API_URL}/update/${productId}`, { qty: newQty }, { headers: { 'user-id': 1 } });
       fetchCart();
     } catch (err) {
       console.error('Error increasing quantity:', err);
@@ -50,7 +50,7 @@ const Cart = () => {
       const item = cart.find((i) => i.product._id === productId);
       if (item.quantity <= 1) return;
       const newQty = item.quantity - 1;
-      await axios.put(`${API_URL}/update/${productId}`, { qty: newQty, userId:1 });
+      await axios.put(`${API_URL}/update/${productId}`, { qty: newQty, }, { headers: { 'user-id': 1 } });
       fetchCart();
     } catch (err) {
       console.error('Error decreasing quantity:', err);
