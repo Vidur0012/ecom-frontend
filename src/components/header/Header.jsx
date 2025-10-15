@@ -53,6 +53,7 @@ const Header = () => {
           color="inherit"
           sx={{ color: 'white' }}
         >
+        <ShoppingCartIcon />
         </IconButton>
       </Toolbar>
     </AppBar>
