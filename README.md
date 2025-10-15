@@ -1,6 +1,9 @@
-# Run commands
+# 1️⃣  Install dependencies
 npm i
+
+# 2️⃣  Start the development server
 npm run dev
+
 
 ## For normal user
 
