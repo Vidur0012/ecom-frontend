@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router';
 
 const Header = ({ cartCount = 0 }) => {
   const location = useLocation();
+  const userId = localStorage.getItem('user-id');
 
   return (
     <AppBar position="sticky" color="primary" elevation={3}>
@@ -34,6 +35,7 @@ const Header = ({ cartCount = 0 }) => {
           >
             Home
           </Button>
+          {userId === '0' && (
           <Button
             component={Link}
             to="/products"
@@ -41,7 +43,7 @@ const Header = ({ cartCount = 0 }) => {
             sx={{ color: 'white', textTransform: 'none', fontWeight: 500 }}
           >
             Products
-          </Button>
+          </Button>)}
         </Box>
 
         {/* Right - Cart icon */}
